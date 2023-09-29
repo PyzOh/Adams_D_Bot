@@ -48,8 +48,6 @@ async def init_db():
 if __name__ == '__main__':
 	print('Starting bot...')
 
-	print('Loading database...')
-	asyncio.run(init_db())
 
 	print('Loading cogs...')
 	cogs = [file.stem for file in Path('cogs').glob('**/*.py') if not file.name.startswith('__')]
